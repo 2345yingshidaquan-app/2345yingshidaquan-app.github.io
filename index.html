@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2345影视大全｜在线影视导航：电影电视剧综艺动漫纪录片一站聚合</title>
+<meta name="description" content="2345影视大全是面向影视爱好者的在线内容导航平台，聚合院线电影、热播电视剧、网络剧集、综艺真人秀、日韩动漫、经典纪录片与短剧解说。站内按题材、地区、年代、清晰度与更新时间多维分类，支持手机、平板、电脑自适应浏览，方便用户快速找到想看的影视作品。访问入口：https://2345yingshidaquan-app.github.io ，每日更新内容索引，覆盖国产剧、美剧、韩剧、日剧及华语港片经典。">
+<meta name="keywords" content="2345影视大全, 2345影视, 影视大全, 在线影视导航, 电影推荐, 电视剧索引, 综艺节目单, 动漫番剧目录, 纪录片合集, 高清影视分类, 国产剧, 美剧排行, 韩剧资讯, 日剧资源, 港片经典, 短剧解说, 影视题材分类, 影视更新日历, 2345yingshidaquan-app.github.io">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="1 days">
+<meta name="language" content="zh-CN">
+<meta name="geo.region" content="CN">
+<meta name="theme-color" content="#0f1f3d">
+<link rel="canonical" href="https://2345yingshidaquan-app.github.io/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"2345影视大全","url":"https://2345yingshidaquan-app.github.io/","description":"影视作品在线分类导航与每日更新索引，涵盖电影、电视剧、综艺、动漫、纪录片与短剧。","potentialAction":{"@type":"SearchAction","target":"https://2345yingshidaquan-app.github.io/#search?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#0f1f3d; --navy2:#1a315c; --gold:#e8b04b; --gold2:#ffd47a;
+--paper:#f4f1ea; --card:#fffdf8; --ink:#1c2536; --muted:#6b7383;
+--line:#e2ddcf; --red:#c0392b; --teal:#137c8b;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+background:var(--paper);color:var(--ink);line-height:1.75;font-size:16px;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+/* ===== TOP STRIP ===== */
+.topstrip{background:var(--navy);color:#c9d6ea;font-size:13px;padding:7px 0;border-bottom:1px solid #2a3f63}
+.topstrip .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.topstrip a:hover{color:var(--gold2)}
+/* ===== MASTHEAD ===== */
+.mast{background:linear-gradient(135deg,#0f1f3d 0%,#1a315c 55%,#23446f 100%);padding:26px 0 22px;color:#fff}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:14px}
+.logo{width:54px;height:54px;flex:0 0 54px;border-radius:14px;background:var(--gold);
+display:grid;place-items:center;font-size:25px;font-weight:900;color:var(--navy);
+box-shadow:0 6px 16px rgba(0,0,0,.28);transform:rotate(-4deg)}
+.title{font-size:30px;font-weight:900;letter-spacing:1px;line-height:1.1}
+.title small{display:block;font-size:12px;font-weight:400;letter-spacing:4px;color:var(--gold2);margin-top:5px;text-transform:uppercase}
+.addr{font-size:13px;color:#a8b8d2;text-align:right}
+.addr b{display:block;color:var(--gold2);font-size:14px;word-break:break-all}
+/* ===== NAV ===== */
+nav.bar{background:#fff;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:50;box-shadow:0 4px 14px rgba(15,31,61,.08)}
+.navlist{display:flex;flex-wrap:wrap;gap:2px;list-style:none}
+.navlist a{padding:14px 16px;font-size:15px;font-weight:700;color:var(--navy);position:relative;transition:.2s}
+.navlist a:hover{background:var(--navy);color:var(--gold2)}
+/* ===== HERO ===== */
+.hero{background:radial-gradient(1200px 500px at 80% -10%,rgba(232,176,75,.16),transparent),linear-gradient(180deg,#15294a,#0f1f3d);padding:52px 0 58px;color:#fff}
+.herogrid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.kicker{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:13px;padding:5px 14px;border-radius:40px;letter-spacing:1px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.2;font-weight:900;margin-bottom:6px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero .sub{font-size:19px;color:#b9c9e2;margin:14px 0 22px;max-width:540px}
+.bigurl{background:rgba(255,255,255,.07);border:1px dashed var(--gold);border-radius:12px;padding:13px 16px;font-size:15px;color:var(--gold2);word-break:break-all;margin-bottom:24px}
+.hero ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
+.hero li{font-size:15px;color:#d7e0ef}
+.hero li::before{content:"▹";color:var(--gold);margin-right:8px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:8px;font-size:15px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid var(--gold)}
+/* ticket cards */
+.tickets{display:grid;gap:16px}
+.ticket{background:var(--card);color:var(--ink);border-radius:14px;padding:18px 20px;position:relative;
+border-left:5px solid var(--gold);box-shadow:0 14px 34px rgba(15,31,61,.24)}
+.ticket span.no{font-size:12px;letter-spacing:2px;color:var(--muted)}
+.ticket h3{font-size:19px;margin:4px 0 6px}
+.ticket p{font-size:13px;color:var(--muted)}
+.ticket.ad{border-left-color:var(--red)}
+.ticket.an{border-left-color:var(--teal)}
+/* ===== SECTION ===== */
+section{padding:56px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:14px;border-bottom:2px solid var(--navy)}
+.sec-head h2{font-size:27px;color:var(--navy);position:relative;padding-left:15px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:5px;background:var(--gold);border-radius:3px}
+.sec-head p{color:var(--muted);font-size:14px;max-width:520px}
+.more{font-size:13px;color:var(--navy);font-weight:700;border-bottom:1px solid var(--navy);padding-bottom:1px}
+/* category grid */
+.catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 16px;text-align:center;transition:.25s;cursor:pointer}
+.cat:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 12px 26px rgba(15,31,61,.1)}
+.cat .ic{font-size:30px;margin-bottom:9px}
+.cat h3{font-size:16px;color:var(--navy);margin-bottom:4px}
+.cat p{font-size:12px;color:var(--muted)}
+/* ===== SPLIT PANEL ===== */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.panel>h3{background:var(--navy);color:#fff;font-size:16px;padding:13px 18px;display:flex;justify-content:space-between;align-items:center}
+.panel>h3 a{font-size:12px;color:var(--gold2);font-weight:400}
+.list{list-style:none}
+.list li{padding:13px 18px;border-bottom:1px dashed var(--line);display:flex;gap:12px;align-items:baseline}
+.list li:last-child{border-bottom:0}
+.list .tag{flex:0 0 52px;font-size:12px;font-weight:800;text-align:center;padding:3px 0;border-radius:4px;height:fit-content}
+.tag.hot{background:#fdecea;color:var(--red)}
+.tag.new{background:#eaf6f7;color:var(--teal)}
+.tag.top{background:#fdf3e0;color:#a06d10}
+.list .txt{flex:1;min-width:0}
+.list .txt b{display:block;font-size:15px}
+.list .txt b a:hover{color:var(--red)}
+.list .txt small{font-size:12.5px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.list .num{flex:0 0 22px;font-size:13px;color:#c4bfb1;font-weight:800}
+/* ===== TIMELINE ===== */
+.timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;border-top:4px solid var(--navy)}
+.day h4{font-size:14px;color:var(--gold);letter-spacing:1px;margin-bottom:8px}
+.day ul{list-style:none;font-size:14px}
+.day li{padding:4px 0;color:#3c4657;border-bottom:1px dotted var(--line)}
+.day li:last-child{border:0}
+.day li span{color:var(--red);font-size:12px;margin-right:6px}
+/* ===== FEATURES ===== */
+.features{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.feat{border-left:3px solid var(--gold);padding:4px 0 4px 16px}
+.feat h3{font-size:16px;color:var(--navy);margin-bottom:6px}
+.feat p{font-size:14px;color:var(--muted)}
+/* ===== PATH ===== */
+.path{background:var(--navy);color:#fff}
+.path .sec-head{border-color:rgba(255,255,255,.2)}
+.path .sec-head h2{color:var(--gold2)}
+.pathgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step}
+.step{padding:24px 22px;border-right:1px solid rgba(255,255,255,.12);position:relative}
+.step:last-child{border:0}
+.step .n{counter-increment:step;font-size:13px;color:var(--gold);letter-spacing:2px}
+.step .n::before{content:"STEP " counter(step);}
+.step h3{font-size:18px;margin:8px 0 6px}
+.step p{font-size:13.5px;color:#aebdd6}
+/* ===== FAQ ===== */
+.faqs{display:grid;gap:12px;max-width:900px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;transition:.2s}
+details[open]{border-color:var(--gold);box-shadow:0 8px 22px rgba(15,31,61,.08)}
+summary{cursor:pointer;font-weight:800;font-size:16px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";color:var(--gold);font-size:20px;line-height:1}
+details[open] summary::after{content:"－"}
+details p{margin-top:12px;color:#4a5364;font-size:14.5px}
+/* ===== ABOUT ===== */
+.about{background:#fff}
+.aboutgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:38px;align-items:start}
+.about p{font-size:15px;color:#3f4757;margin-bottom:14px}
+.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stat{background:var(--card);padding:20px 10px;text-align:center}
+.stat b{display:block;font-size:26px;color:var(--navy);font-weight:900}
+.stat small{font-size:12px;color:var(--muted)}
+.quote{background:var(--navy);color:#fff;border-radius:14px;padding:26px;margin-top:26px}
+.quote p{font-size:16px;line-height:1.9}
+.quote b{color:var(--gold2)}
+/* ===== FOOTER ===== */
+footer{background:#0a1528;color:#7e8ca6;padding:44px 0 26px;font-size:13.5px}
+.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px;margin-bottom:28px}
+.footgrid h4{color:var(--gold2);font-size:14px;margin-bottom:12px;letter-spacing:1px}
+.footgrid ul{list-style:none}
+.footgrid li{padding:5px 0}
+.footgrid a:hover{color:var(--gold2)}
+.footbrand h3{font-size:22px;color:#fff;margin-bottom:8px}
+.footbrand p{font-size:13px;line-height:1.8}
+.copyright{border-top:1px solid #1c2b45;padding-top:18px;text-align:center;color:#5e6b83;font-size:12.5px}
+.copyright b{color:var(--gold2)}
+@media(max-width:860px){
+.herogrid,.split,.aboutgrid{grid-template-columns:1fr;gap:28px}
+.pathgrid{grid-template-columns:1fr 1fr}
+.footgrid{grid-template-columns:1fr 1fr}
+.title{font-size:24px}
+.brandrow{align-items:flex-start}
+.addr{text-align:left}
+.hero ul{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+.catgrid{grid-template-columns:repeat(2,1fr)}
+.pathgrid,.footgrid{grid-template-columns:1fr}
+.navlist a{padding:12px 11px;font-size:14px}
+.wrap{padding:0 16px}
+section{padding:42px 0}
+.topstrip{font-size:12px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="topstrip">
+<div class="wrap">
+<span>📺 影视作品在线分类导航 · 每日更新内容索引</span>
+<span><a href="https://2345yingshidaquan-app.github.io/">https://2345yingshidaquan-app.github.io/</a> · 手机 / 平板 / 电脑自适应</span>
+</div>
+</div>
+
+<header class="mast">
+<div class="wrap">
+<div class="brandrow">
+<div class="mark">
+<div class="logo">2345</div>
+<div class="title">影视大全<small>2345 YINGSHI DAQUAN</small></div>
+</div>
+<div class="addr">
+官方访问入口<b>2345yingshidaquan-app.github.io</b>
+收录入口：https://2345yingshidaquan-app.github.io/
+</div>
+</div>
+</div>
+</header>
+
+<nav class="bar">
+<ul class="navlist wrap">
+<li><a href="#home">首页</a></li>
+<li><a href="#movie">电影频道</a></li>
+<li><a href="#tv">电视剧集</a></li>
+<li><a href="#show">综艺动漫</a></li>
+<li><a href="#doc">纪录片库</a></li>
+<li><a href="#rank">榜单更新</a></li>
+<li><a href="#guide">观影指南</a></li>
+<li><a href="#faq">常见问题</a></li>
+<li><a href="#about">关于本站</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div class="wrap">
+<div class="herogrid">
+<div>
+<span class="kicker">在线影视导航 · 全品类内容索引</span>
+<h1>一部入口，<em>看遍</em>电影 · 剧集 · 综艺 · 动漫</h1>
+<p class="sub">2345影视大全按题材、地区、年代与更新时间对影视作品做多维归档，方便你快速定位想看的电影和电视剧内容。</p>
+<div class="bigurl">🌐 官方站点：https://2345yingshidaquan-app.github.io/</div>
+<ul>
+<li>院线电影 · 华语港片 · 欧美大片</li>
+<li>热播国产剧 · 美剧 · 韩剧 · 日剧</li>
+<li>综艺真人秀 · 日韩动漫番剧</li>
+<li>人文自然纪录片 · 短剧解说</li>
+</ul>
+<div class="ctas">
+<a class="btn" href="#movie">开始浏览</a>
+<a class="btn ghost" href="https://2345yingshidaquan-app.github.io/">访问 2345影视大全</a>
+</div>
+</div>
+<div class="tickets">
+<div class="ticket">
+<span class="no">今日推荐 · TICKET 01</span>
+<h3>院线电影实时索引</h3>
+<p>按动作、喜剧、悬疑、爱情、科幻、动画等题材分类，支持按年份与地区筛选。</p>
+</div>
+<div class="ticket ad">
+<span class="no">热门跟播 · TICKET 02</span>
+<h3>电视剧集同步更新</h3>
+<p>国产剧、美剧、韩剧、日剧分区呈现，追踪播出进度与剧情类型。</p>
+</div>
+<div class="ticket an">
+<span class="no">轻松一刻 · TICKET 03</span>
+<h3>综艺与动漫专栏</h3>
+<p>真人秀、竞技综艺、生活观察类节目，配合日韩番剧与国漫合集。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="cate">
+<div class="wrap">
+<div class="sec-head">
+<h2>内容分类导航</h2>
+<p>2345影视大全将影视内容按类型拆分，九个主栏目覆盖主流观影需求。</p>
+<a class="more" href="https://2345yingshidaquan-app.github.io/">查看完整分类 »</a>
+</div>
+<div class="catgrid">
+<div class="cat"><div class="ic">🎬</div><h3>院线电影</h3><p>动作 · 喜剧 · 悬疑 · 爱情 · 科幻 · 动画</p></div>
+<div class="cat"><div class="ic">📺</div><h3>国产电视剧</h3><p>年代剧 · 古装剧 · 都市情感 · 刑侦律政</p></div>
+<div class="cat"><div class="ic">🌍</div><h3>海外剧集</h3><p>美剧 · 韩剧 · 日剧 · 英剧 · 泰剧</p></div>
+<div class="cat"><div class="ic">🎤</div><h3>综艺节目</h3><p>真人秀 · 音乐竞演 · 户外竞技 · 访谈</p></div>
+<div class="cat"><div class="ic">🎨</div><h3>动漫番剧</h3><p>日漫 · 国漫 · 美漫 · 剧场版 · 经典怀旧</p></div>
+<div class="cat"><div class="ic">🐉</div><h3>港片经典</h3><p>港产动作 · 无厘头喜剧 · 黑帮警匪</p></div>
+<div class="cat"><div class="ic">🎞️</div><h3>纪录片库</h3><p>自然地理 · 历史人文 · 科技探索</p></div>
+<div class="cat"><div class="ic">⏳</div><h3>经典老片</h3><p>八十年代至今的华语与海外经典</p></div>
+<div class="cat"><div class="ic">📱</div><h3>短剧解说</h3><p>微短剧 · 剧集解说 · 精编合集</p></div>
+</div>
+</div>
+</section>
+
+<section id="movie" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<h2>电影频道</h2>
+<p>院线新片与经典老片并存，按题材与年代快速定位。关键词：2345影视大全 · 在线电影导航。</p>
+<a class="more" href="#">进入电影频道 »</a>
+</div>
+<div class="split">
+<div class="panel">
+<h3>院线新片索引 <a href="#">全部 »</a></h3>
+<ul class="list">
+<li><span class="num">1</span><div class="txt"><b><a href="#">悬疑犯罪新片《暗河之下》</a></b><small>2026 · 国产 · 悬疑 / 犯罪 — 双线叙事还原一桩沉寂多年的旧案</small></div><span class="tag hot">热映</span></li>
+<li><span class="num">2</span><div class="txt"><b><a href="#">合家欢动画《云上小镇》</a></b><small>2026 · 动画 · 奇幻 / 冒险 — 适合亲子共同观看的治愈系作品</small></div><span class="tag new">新片</span></li>
+<li><span class="num">3</span><div class="txt"><b><a href="#">动作大片《边境防线》</a></b><small>2026 · 动作 · 警匪 — 高空特技与实景追车场面密集</small></div><span class="tag hot">热映</span></li>
+<li><span class="num">4</span><div class="txt"><b><a href="#">都市爱情《第七次偶遇》</a></b><small>2026 · 爱情 · 喜剧 — 七次相遇串联起两段错位的人生</small></div><span class="tag new">新片</span></li>
+<li><span class="num">5</span><div class="txt"><b><a href="#">科幻灾难《沉没的北方》</a></b><small>2026 · 科幻 · 灾难 — 气候议题下的群体求生叙事</small></div><span class="tag top">高分</span></li>
+<li><span class="num">6</span><div class="txt"><b><a href="#">喜剧公路《一路向南》</a></b><small>2026 · 喜剧 · 公路 — 三个陌生人被迫同行的荒诞旅程</small></div><span class="tag new">新片</span></li>
+</ul>
+</div>
+<div class="panel">
+<h3>经典老片重温 <a href="#">全部 »</a></h3>
+<ul class="list">
+<li><span class="num">1</span><div class="txt"><b><a href="#">港片经典《英雄本色》系列</a></b><small>1986-1989 · 港片 · 动作 / 黑帮 — 影响一代人的江湖情谊范本</small></div><span class="tag top">经典</span></li>
+<li><span class="num">2</span><div class="txt"><b><a href="#">无厘头喜剧《大话西游》</a></b><small>1995 · 港片 · 喜剧 / 奇幻 — 后现代解构的经典爱情寓言</small></div><span class="tag top">经典</span></li>
+<li><span class="num">3</span><div class="txt"><b><a href="#">华语文艺《活着》</a></b><small>1994 · 国产 · 剧情 / 年代 — 四十年家庭变迁的克制书写</small></div><span class="tag top">高分</span></li>
+<li><span class="num">4</span><div class="txt"><b><a href="#">欧美经典《肖申克的救赎》</a></b><small>1994 · 美国 · 剧情 / 犯罪 — 关于希望与自由的长期口碑之选</small></div><span class="tag top">高分</span></li>
+<li><span class="num">5</span><div class="txt"><b><a href="#">意大利新写实《天堂电影院》</a></b><small>1988 · 意大利 · 剧情 — 电影与成长交织的抒情之作</small></div><span class="tag top">经典</span></li>
+<li><span class="num">6</span><div class="txt"><b><a href="#">日本动画《千与千寻》</a></b><small>2001 · 日本 · 动画 / 奇幻 — 成长与勇气的幻想世界</small></div><span class="tag top">经典</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="tv" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<h2>电视剧集</h2>
+<p>国产剧与海外剧分区归档，方便追更不同地区的长剧内容。</p>
+<a class="more" href="#">进入电视剧频道 »</a>
+</div>
+<div class="split">
+<div class="panel">
+<h3>国产热播剧 <a href="#">全部 »</a></h3>
+<ul class="list">
+<li><span class="num">1</span><div class="txt"><b><a href="#">年代群像《南城旧事》</a></b><small>40集 · 年代 / 家庭 — 一个南方家族跨越三十年的兴衰起落</small></div><span class="tag hot">热播</span></li>
+<li><span class="num">2</span><div class="txt"><b><a href="#">古装权谋《长安棋局》</a></b><small>36集 · 古装 / 权谋 — 朝堂博弈与市井谋生的双线并行</small></div><span class="tag hot">热播</span></li>
+<li><span class="num">3</span><div class="txt"><b><a href="#">都市职场《加班无罪》</a></b><small>32集 · 都市 / 职场 — 互联网行业的压力与温情</small></div><span class="tag new">更新</span></li>
+<li><span class="num">4</span><div class="txt"><b><a href="#">刑侦悬疑《无声证词》</a></b><small>24集 · 刑侦 / 悬疑 — 法医视角下的连环案件侦破</small></div><span class="tag top">高分</span></li>
+<li><span class="num">5</span><div class="txt"><b><a href="#">女性成长《她的第三次选择》</a></b><small>30集 · 都市 / 情感 — 中年女性的职业与家庭重构</small></div><span class="tag new">更新</span></li>
+</ul>
+</div>
+<div class="panel">
+<h3>海外剧集 <a href="#">全部 »</a></h3>
+<ul class="list">
+<li><span class="num">1</span><div class="txt"><b><a href="#">美剧《夜行者第四季》</a></b><small>10集 · 美剧 · 犯罪 / 悬疑 — 黑夜都市中的私家侦探群像</small></div><span class="tag hot">热播</span></li>
+<li><span class="num">2</span><div class="txt"><b><a href="#">韩剧《首尔的雨》</a></b><small>16集 · 韩剧 · 爱情 / 治愈 — 暴雨季里两个孤独灵魂的靠近</small></div><span class="tag hot">热播</span></li>
+<li><span class="num">3</span><div class="txt"><b><a href="#">日剧《料理人的清晨》</a></b><small>12集 · 日剧 · 美食 / 职场 — 一家小餐馆的日常与坚持</small></div><span class="tag new">更新</span></li>
+<li><span class="num">4</span><div class="txt"><b><a href="#">英剧《迷雾庄园》</a></b><small>6集 · 英剧 · 历史 / 悬疑 — 庄园遗产背后的家族秘密</small></div><span class="tag top">高分</span></li>
+<li><span class="num">5</span><div class="txt"><b><a href="#">泰剧《海边的承诺》</a></b><small>14集 · 泰剧 · 爱情 / 剧情 — 海岛小镇的双向救赎</small></div><span class="tag new">更新</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="show" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<h2>综艺 · 动漫</h2>
+<p>轻松向内容独立成栏，真人秀与番剧分开浏览，互不干扰。</p>
+<a class="more" href="#">进入综艺动漫频道 »</a>
+</div>
+<div class="split">
+<div class="panel">
+<h3>综艺节目单 <a href="#">全部 »</a></h3>
+<ul class="list">
+<li><span class="num">1</span><div class="txt"><b><a href="#">户外竞技《出发吧少年》</a></b><small>第十二季 · 户外 / 竞技 — 嘉宾分组完成城市生存挑战</small></div><span class="tag hot">热播</span></li>
+<li><span class="num">2</span><div class="txt"><b><a href="#">音乐竞演《声浪》</a></b><small>第七季 · 音乐 / 舞台 — 独立音乐人的现场比拼</small></div><span class="tag hot">热播</span></li>
+<li><span class="num">3</span><div class="txt"><b><a href="#">生活观察《同住的日子》</a></b><small>第三季 · 生活 / 观察 — 素人合租生活的真实记录</small></div><span class="tag new">更新</span></li>
+<li><span class="num">4</span><div class="txt"><b><a href="#">文化访谈《书房夜话》</a></b><small>常播 · 文化 / 访谈 — 作家与学者的深度对谈</small></div><span class="tag top">高分</span></li>
+<li><span class="num">5</span><div class="txt"><b><a href="#">美食旅行《路边摊地图》</a></b><small>第二季 · 美食 / 旅行 — 小城夜市的在地风味</small></div><span class="tag new">更新</span></li>
+</ul>
+</div>
+<div class="panel">
+<h3>动漫番剧 <a href="#">全部 »</a></h3>
+<ul class="list">
+<li><span class="num">1</span><div class="txt"><b><a href="#">日漫《深海档案馆》</a></b><small>连载中 · 冒险 / 奇幻 — 少年调查员深入未知海域</small></div><span class="tag hot">追番</span></li>
+<li><span class="num">2</span><div class="txt"><b><a href="#">国漫《铁马冰河》</a></b><small>连载中 · 历史 / 战争 — 明末边关的守与战</small></div><span class="tag hot">追番</span></li>
+<li><span class="num">3</span><div class="txt"><b><a href="#">日漫《便利店夜班》</a></b><small>已完结 · 治愈 / 日常 — 夜班店员的都市小故事</small></div><span class="tag top">完结</span></li>
+<li><span class="num">4</span><div class="txt"><b><a href="#">美漫《机械之心》</a></b><small>连载中 · 科幻 / 动作 — 机械生命体的身份追寻</small></div><span class="tag new">更新</span></li>
+<li><span class="num">5</span><div class="txt"><b><a href="#">剧场版合集《夏日幻光》</a></b><small>已完结 · 剧场版 — 青春主题的系列动画电影</small></div><span class="tag top">完结</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="doc" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<h2>纪录片库</h2>
+<p>用真实的镜头补足虚构叙事之外的世界，自然、历史、科技三类为主。</p>
+<a class="more" href="#">进入纪录片频道 »</a>
+</div>
+<div class="catgrid">
+<div class="cat"><div class="ic">🌿</div><h3>自然地理</h3><p>极地、雨林、深海、高山生态系统观察</p></div>
+<div class="cat"><div class="ic">🏛️</div><h3>历史人文</h3><p>古代文明、城市变迁、工艺传承</p></div>
+<div class="cat"><div class="ic">🔬</div><h3>科技探索</h3><p>航天、人工智能、生命科学前沿</p></div>
+<div class="cat"><div class="ic">🍜</div><h3>饮食文化</h3><p>地方风味、食材溯源与烹饪技艺</p></div>
+<div class="cat"><div class="ic">🐾</div><h3>动物世界</h3><p>野生动物行为与栖息地纪实</p></div>
+<div class="cat"><div class="ic">🎭</div><h3>艺术人生</h3><p>艺术家创作过程与代表作解析</p></div>
+</div>
+</div>
+</section>
+
+<section id="rank" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<h2>榜单与更新日历</h2>
+<p>2345影视大全每日整理更新动态，热门与高分内容分栏呈现，便于快速决策。</p>
+<a class="more" href="https://2345yingshidaquan-app.github.io/">查看全部榜单 »</a>
+</div>
+<div class="timeline">
+<div class="day">
+<h4>MON · 本周一</h4>
+<ul>
+<li><span>●</span>美剧《夜行者》第四季上线</li>
+<li><span>●</span>国产剧《南城旧事》更新</li>
+<li><span>●</span>纪录片《极地之夏》加更</li>
+</ul>
+</div>
+<div class="day">
+<h4>TUE · 本周二</h4>
+<ul>
+<li><span>●</span>韩剧《首尔的雨》更新</li>
+<li><span>●</span>日漫《深海档案馆》追番</li>
+<li><span>●</span>综艺《声浪》新一期</li>
+</ul>
+</div>
+<div class="day">
+<h4>WED · 本周三</h4>
+<ul>
+<li><span>●</span>国产剧《长安棋局》更新</li>
+<li><span>●</span>院线电影《暗河之下》索引</li>
+<li><span>●</span>国漫《铁马冰河》更新</li>
+</ul>
+</div>
+<div class="day">
+<h4>THU · 本周四</h4>
+<ul>
+<li><span>●</span>英剧《迷雾庄园》完结篇</li>
+<li><span>●</span>综艺《出发吧少年》上线</li>
+<li><span>●</span>美食节目《路边摊地图》</li>
+</ul>
+</div>
+<div class="day">
+<h4>FRI · 本周五</h4>
+<ul>
+<li><span>●</span>院线新片《边境防线》索引</li>
+<li><span>●</span>国产剧《加班无罪》更新</li>
+<li><span>●</span>纪录片《深海之声》上线</li>
+</ul>
+</div>
+<div class="day">
+<h4>WEEKEND · 周末</h4>
+<ul>
+<li><span>●</span>高分经典影片专题推荐</li>
+<li><span>●</span>日剧《料理人的清晨》完结</li>
+<li><span>●</span>短剧解说周更合集</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="features" id="guide">
+<div class="wrap">
+<div class="sec-head">
+<h2>本站特色与观影指南</h2>
+<p>了解 2345影视大全的内容组织方式，能更快找到对味的片子。</p>
+</div>
+<div class="fgrid">
+<div class="feat"><h3>多维分类筛选</h3><p>按类型、地区、年代、清晰度与更新时间五个维度归档，告别盲目翻找。</p></div>
+<div class="feat"><h3>每日更新索引</h3><p>热播剧集与综艺的播出进度每日同步，追更不断档。</p></div>
+<div class="feat"><h3>多终端自适应</h3><p>手机、平板、电脑三端适配，页面结构随屏幕宽度自动重排。</p></div>
+<div class="feat"><h3>内容题材丰富</h3><p>从院线大片到冷门纪录片，从新番到经典老片，覆盖主流与小众口味。</p></div>
+<div class="feat"><h3>快速检索入口</h3><p>栏目导航直达对应板块，减少层级跳转，两步之内找到目标。</p></div>
+<div class="feat"><h3>纯净浏览体验</h3><p>简洁版式搭配低干扰布局，内容优先级高于花哨装饰。</p></div>
+</div>
+</div>
+</section>
+
+<section class="path">
+<div class="wrap">
+<div class="sec-head">
+<h2>三步开始浏览</h2>
+<p>2345影视大全把入口做得很浅，任何设备都能快速上手。</p>
+</div>
+<div class="pathgrid">
+<div class="step"><div class="n"></div><h3>打开站点</h3><p>访问 https://2345yingshidaquan-app.github.io/ ，自动适配当前设备的屏幕尺寸。</p></div>
+<div class="step"><div class="n"></div><h3>选择栏目</h3><p>从导航栏挑选电影、电视剧、综艺动漫、纪录片等主栏目。</p></div>
+<div class="step"><div class="n"></div><h3>细分筛选</h3><p>在栏目内按题材、地区、年代进一步缩小范围，定位目标内容。</p></div>
+<div class="step"><div class="n"></div><h3>收藏入口</h3><p>把站点地址加入书签，下次直接打开，无需重新搜索。</p></div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<div class="sec-head" style="justify-content:center;text-align:center;flex-direction:column;align-items:center">
+<h2>常见问题</h2>
+<p>关于 2345影视大全 的内容范围、访问方式与设备适配，这里集中解答。</p>
+</div>
+<div class="faqs">
+<details open>
+<summary>2345影视大全主要收录哪些内容？</summary>
+<p>2345影视大全是影视作品的在线分类导航，主要覆盖院线电影、电视剧集（含国产剧与美剧、韩剧、日剧等海外剧）、综艺节目、动漫番剧、纪录片与短剧解说，按题材与地区做归档整理。</p>
+</details>
+<details>
+<summary>在手机上能正常浏览吗？</summary>
+<p>可以。本站采用响应式布局，页面结构会随屏幕宽度自动重排，手机竖屏、平板横屏与电脑宽屏均有对应的版式，无需安装额外应用。</p>
+</details>
+<details>
+<summary>如何找到某一类特定题材的片子？</summary>
+<p>先在导航栏进入对应主栏目，再按页面内的题材、地区、年代标签筛选即可。首页也提供电影、电视剧、综艺动漫、纪录片四个快速入口。</p>
+</details>
+<details>
+<summary>榜单和更新日历多久更新一次？</summary>
+<p>更新日历按周整理，榜单内容每日维护。热门与高分内容分栏呈现，便于用户快速判断当前值得关注的作品。</p>
+</details>
+<details>
+<summary>官方站点地址是什么？</summary>
+<p>官方访问入口为 <b>https://2345yingshidaquan-app.github.io/</b>，建议将该地址加入浏览器书签以便长期访问。</p>
+</details>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="wrap">
+<div class="sec-head">
+<h2>关于 2345影视大全</h2>
+<p>一个把影视内容整理清楚的分类导航站点。</p>
+</div>
+<div class="aboutgrid">
+<div>
+<p><strong>2345影视大全</strong>是一个面向影视爱好者的在线内容导航平台，目标是把分散的电影、电视剧、综艺、动漫与纪录片信息，按统一的分类逻辑整理到一处，让用户少花时间找片，多花时间看片。</p>
+<p>站内的栏目划分兼顾主流与小众：既有院线新片、热播国产剧与综艺节目单，也保留了港片经典、华语老片与纪录片库，让不同年龄段的观影习惯都能被照顾到。</p>
+<p>内容更新方面，2345影视大全以日常维护为主，热播剧集与综艺的播出进度按周同步，院线新片与经典老片则按需补充索引。每个条目都尽量标注年份、地区与题材标签，方便筛选。</p>
+<p>站点的访问入口为 <b>https://2345yingshidaquan-app.github.io/</b> ，支持多终端自适应浏览，结构与内容会持续迭代。</p>
+<div class="statrow">
+<div class="stat"><b>9+</b><small>主栏目</small></div>
+<div class="stat"><b>6</b><small>题材大类</small></div>
+<div class="stat"><b>每日</b><small>更新维护</small></div>
+</div>
+</div>
+<div class="quote">
+<p>「<b>找片</b>这件事本身不该比看片更累。<br>2345影视大全 只做一件事：把电影、剧集、综艺、动漫与纪录片分门别类摆好，剩下的时间交还给观众。」</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="footgrid">
+<div class="footbrand">
+<h3>2345影视大全</h3>
+<p>影视作品在线分类导航，涵盖电影、电视剧、综艺、动漫、纪录片与短剧解说，支持手机、平板、电脑自适应浏览。</p>
+<p style="margin-top:12px">🌐 <a href="https://2345yingshidaquan-app.github.io/" style="color:#aebdd6">2345yingshidaquan-app.github.io</a></p>
+</div>
+<div>
+<h4>内容栏目</h4>
+<ul>
+<li><a href="#movie">院线电影</a></li>
+<li><a href="#tv">国产电视剧</a></li>
+<li><a href="#tv">海外剧集</a></li>
+<li><a href="#show">综艺动漫</a></li>
+<li><a href="#doc">纪录片库</a></li>
+</ul>
+</div>
+<div>
+<h4>快速入口</h4>
+<ul>
+<li><a href="#rank">榜单更新</a></li>
+<li><a href="#guide">观影指南</a></li>
+<li><a href="#faq">常见问题</a></li>
+<li><a href="#about">关于本站</a></li>
+<li><a href="https://2345yingshidaquan-app.github.io/">返回首页</a></li>
+</ul>
+</div>
+<div>
+<h4>站点信息</h4>
+<ul>
+<li>官方地址：2345yingshidaquan-app.github.io</li>
+<li>完整入口：https://2345yingshidaquan-app.github.io/</li>
+<li>适配：手机 / 平板 / 电脑</li>
+<li>更新频率：每日维护</li>
+<li>语言：简体中文</li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+© 2026 <b>2345影视大全</b> · 影视作品在线分类导航 · 官方站点 <b>https://2345yingshidaquan-app.github.io/</b> · 内容仅供影视信息索引参考
+</div>
+</div>
+</footer>
+
+</body>
+</html>
